@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+    margin: 0;
+    background-color: aquamarine;
+    font-family: 'Turret Road', cursive;
+}
+
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10%;
+    background-color: #bebebe;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.brand{
+    font-size: 3rem;
+}
+
+.menuIcon{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.modalMenu{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.500);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 200;
+}
+
+.closeIcon{
+    color: orange;
+    font-size: 2rem;
+    position: absolute;
+    top: 15vh;
+    right: 10%;
+}
+
+.closeIcon:hover{
+    color: orangered;
+    cursor: pointer;
+}
+
+.modalMenu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.modalMenu a:hover{
+    color: orange;
+    font-size: 2.2rem;
+}
+
+.container{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+}
+
+.container section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home{
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    gap: 60px;
+}
+
+.homeImage{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 200px 50px 200px 50px;
+    box-shadow: inset 5px 6px 7px rgba(0,0,0,0.500);
+    border: 14px solid white;
+    animation-name: backToTop;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.homeText{
+    font-size: 6rem;
+    color: rgb(216, 234, 245);
+    animation-name: rightToLeft;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.about{
+    background-image: url(https://picsum.photos/seed/220/900);
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    justify-content: flex-start !important;
+}
+
+.contact{
+    background-image: url(https://picsum.photos/seed/3200/900);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.showcase{
+    background-image: url(https://picsum.photos/seed/41100/900);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.rotateIcon{
+    font-size: 5rem;
+    color: white;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.alertAbout{
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: paleturquoise;
+    color: red;
+    position: sticky;
+    top: 10vh;
+}
+
+@keyframes backToTop{
+    from{
+        transform: translateZ(20vh);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateZ(0vh);
+        opacity: 1;
+    }
+}
+
+@keyframes bottomToTop{
+    from{
+        transform: translateX(20vw);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+}
+
+@keyframes rightToLeft{
+    from{
+        transform: translateX(20vw);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
