@@ -89,7 +89,8 @@ body{
 
 .container section{
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,6 +103,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     gap: 40px;
+    
 }
 
 .home_content{
@@ -110,6 +112,8 @@ body{
     align-content: center;
     gap: 40px;
     height: 100%;
+    margin-bottom: auto;
+    
 }
 
 .homeImage{
@@ -186,9 +190,28 @@ body{
 }
 
 .showcase{
-    background-image: url(https://picsum.photos/seed/41100/900);
-    background-size: cover;
-    background-attachment: fixed;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+}
+
+.wrapper_showcase{
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.showcase_title{
+    font-size: 3rem;
+}
+
+.wrapper_showcase img{
+    transition-duration: .5s;
+}
+
+.wrapper_showcase img:hover{
+    border-radius: 0 100px 100px 0;
 }
 
 .rotateIcon{
